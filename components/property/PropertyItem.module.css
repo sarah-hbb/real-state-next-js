@@ -1,0 +1,35 @@
+.property-item {
+  border-radius: 10px;
+  padding: 0.7em;
+  flex: 1;
+}
+
+.property-item__image{
+  position: relative;
+  width: 100%;
+  min-height: 20vh;
+}
+
+.property-item > div {
+  padding: 0.7em;
+  border-bottom: solid rgb(193, 193, 193) 0.01px;
+}
+
+.property-price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.property-features {
+  color: rgb(134, 39, 39);
+}
+
+.property-info {
+}
+
+.verified-icon {
+  width: 1.3em;
+  height: 1.3em;
+  color: rgb(50, 203, 8);
+}

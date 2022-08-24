@@ -1,0 +1,141 @@
+.header {
+  position: relative;
+  /* background-color: bisque; */
+  width: 100%;
+  min-height: 10vh;
+  padding: 1em 2em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-bottom: solid 0.1px gray;
+  z-index: 100;
+}
+
+/* container */
+.navbar-items {
+  position: absolute;
+  right: 0;
+  top: 40%;
+  padding: 0.1em 1em;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+/* menu */
+.menu {
+  display: none;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  z-index: 10;
+  transition: all 0.2s;
+}
+
+.menu.is-active {
+  position: absolute;
+  right: 0;
+  top: 100%;
+  padding: 0.1em 1em;
+  width: 30vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+  background-color: white;
+}
+
+.menu.is-active a {
+  padding: 1em;
+}
+
+.menu a {
+  padding: 0 1em;
+  width: 100%;
+  /* background-color: yellow; */
+  transition: 2s;
+  border-top: 0.1px solid black;
+}
+
+.menu a:hover {
+  text-decoration: underline;
+}
+
+.burger-menu {
+  display: block;
+  position: relative;
+  z-index: 1;
+  user-select: none;
+  border: none;
+  appearance: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+}
+.burger-menu span {
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  background-color: gray;
+  border-radius: 6px;
+  transform-origin: 0 0;
+  transition: ease-in-out 0.3s;
+}
+
+.burger-menu:hover span:nth-child(2) {
+  transform: translateX(10px);
+  background-color: black;
+}
+
+.burger-menu.is-active span:nth-child(1) {
+  background-color: black;
+  transform: translate(0px, -2px) rotate(45deg);
+}
+
+.burger-menu.is-active span:nth-child(3) {
+  background-color: black;
+  transform: translate(-3px, 3px) rotate(-45deg);
+}
+
+.burger-menu.is-active span:nth-child(2) {
+  opacity: 0;
+  transform: translateX(15px);
+}
+
+@media (min-width: 768px) {
+  .menu {
+  
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .menu a {
+    border: none;
+    padding: 0;
+  }
+
+  .burger-menu {
+    display: none;
+  }
+
+  .menu.is-active {
+
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .menu.is-active a {
+    padding: 0 1em;
+    width: 100%;
+    transition: 2s;
+  }
+}

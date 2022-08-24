@@ -1,0 +1,15 @@
+.filters{
+    padding: 2em;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    background-color: rgba(163, 163, 163, 0.354);
+}
+
+.filters select{
+    background-color: rgba(194, 208, 208, 0.486);
+    padding: .7em;
+    margin: .7em 1em .7em 0.2em;
+    border-radius: 1em;
+    color: black
+}
